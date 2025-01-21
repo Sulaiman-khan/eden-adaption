@@ -35,6 +35,14 @@
   border-radius: 100px;
 }
 
+.green-btn {
+  background: #008D45 !important;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  display: inline-block !important;
+  border-radius: 100px;
+}
+
 .primary-bg {
   background-color: #008D45;
 }
@@ -87,7 +95,7 @@ header .nav-item .nav-link {
 }
 .hero_sec .mySwiper2 .swiper-slide .text {
   z-index: 10;
-  top: 35%;
+  top: 40%;
   left: 10%;
   transform: translate(0%, -50%);
   max-width: 700px;
@@ -107,19 +115,29 @@ header .nav-item .nav-link {
   box-sizing: border-box;
   padding: 10px 0;
   position: absolute;
-  bottom: 0;
+  bottom: -60px !important;
   z-index: 3;
 }
 .hero_sec .mySwiper .swiper-slide {
   width: 25%;
   height: 100%;
-  opacity: 0.8;
   position: relative;
+  border-radius: 20px;
+  overflow: hidden;
 }
-.hero_sec .mySwiper .swiper-slide h4 {
+.hero_sec .mySwiper .swiper-slide::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.566);
   position: absolute;
-  bottom: 0;
-  left: 20px;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.hero_sec .mySwiper .swiper-slide h5 {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
   color: #ffffff;
 }
 .hero_sec .mySwiper .swiper-slide-thumb-active {
@@ -192,6 +210,23 @@ header .nav-item .nav-link {
 }
 .services .ser_box:hover {
   box-shadow: 0px 3px 15px rgb(224, 224, 224);
+  background-color: #008D45;
+}
+.services .ser_box:hover i {
+  color: #ffffff !important;
+}
+.services .ser_box:hover p {
+  color: #ffffff !important;
+}
+.services .ser_box:hover h5 {
+  color: #ffffff !important;
+}
+.services .ser_box:hover .green-btn {
+  background-color: #ffffff !important;
+  color: #008D45 !important;
+}
+.services .ser_box:hover .green-btn i {
+  color: #008D45 !important;
 }
 .services .ser_box span {
   font-size: 2rem;
@@ -316,6 +351,7 @@ footer .location {
 
 .detail-form .form-sec {
   background-color: #F1F1F1;
+  border: 2px solid #008D45;
 }
 
 .aboutslider .swiper-slide img {

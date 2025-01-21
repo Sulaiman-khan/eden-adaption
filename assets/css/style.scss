@@ -41,6 +41,13 @@
     display: inline-block !important;
     border-radius: 100px;
   }
+  .green-btn{
+    background: $primary !important;
+    text-decoration: none !important;
+    color: #ffffff !important;
+    display: inline-block !important;
+    border-radius: 100px;
+  }
 .primary-bg{
     background-color: $primary;
 }
@@ -90,7 +97,7 @@ header{
 position: relative;
 .text{
     z-index: 10;
-    top: 35%;
+    top: 40%;
     left: 10%;
     transform: translate(0%, -50%);
     max-width: 700px;
@@ -113,7 +120,7 @@ position: relative;
         box-sizing: border-box;
         padding: 10px 0;
         position: absolute;
-        bottom: 0;
+        bottom: -60px !important;
         z-index: 3;
 
       }
@@ -121,12 +128,23 @@ position: relative;
       .mySwiper .swiper-slide {
         width: 25%;
         height: 100%;
-        opacity: 0.8;
         position: relative;
-        h4{
+        border-radius: 20px;
+        overflow: hidden;
+        &::before{
+          content: '';
+          background-color: rgba(0, 0, 0, 0.566);
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+        }
+        
+        h5{
             position: absolute;
-            bottom: 0;
-            left: 20px;
+            bottom: 10px;
+            left: 15px;
             color: #ffffff;
         }
       }
@@ -200,6 +218,23 @@ position: relative;
         transition: 0.4s all;
         &:hover{
             box-shadow: 0px 3px 15px rgb(224, 224, 224);
+            background-color: $primary;
+            i{
+              color: #ffffff !important;
+            }
+            p{
+              color: #ffffff !important;
+            }
+            h5{
+              color: #ffffff !important;
+            }
+            .green-btn{
+              background-color: #ffffff !important;
+              color: $primary !important;
+              i{
+                color: $primary !important;
+              }
+            }
         }
         span{
             font-size: 2rem;
@@ -332,6 +367,7 @@ footer{
 .detail-form{
   .form-sec{
     background-color: #F1F1F1;
+    border: 2px solid $primary;
   }
 }
 .aboutslider{
