@@ -40,6 +40,7 @@
     color: #ffffff !important;
     display: inline-block !important;
     border-radius: 100px;
+    transition: 0.4s;
   }
   .green-btn{
     background: $primary !important;
@@ -267,10 +268,11 @@ position: relative;
 footer{
   .footermedia{
     a{
-      background: $gradient;
+      background: #FAFAFA;
       padding: 10px;
       width: 45px !important;
       text-align: center;
+      color: $primary !important;
     }
   }
   .links{
